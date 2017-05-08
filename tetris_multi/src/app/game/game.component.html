@@ -1,0 +1,76 @@
+<div class="screen_user" [ngClass]="{'multi': game.mode == 1}">
+  <div class="wrap_map">
+    <div class="inner_map">
+      <div class="section_score">
+        <div class="wrap_score">
+          <i class="xi-gamepad xi-2x"></i>
+          <span id="score">0</span>
+        </div>
+        <div class="wrap_combo">
+          <i id="comboIcon" class="xi-emoticon-bad-o xi-2x"></i>
+          <span id="combo">0</span>
+        </div>
+      </div>
+      <div id="currentBlock"></div>
+      <div id="map"></div>
+    </div>
+    <div class="section_preview">
+      <div class="btn_game" *ngIf="game.mode == 0 && game.flag == false" (click)="startGame()">
+        <i class="xi-border-clear xi-3x red"></i>
+        <span class="orange">S</span>
+        <span class="yellow">T</span>
+        <span class="green">A</span>
+        <span class="blue">R</span>
+        <span class="purple">T</span>
+      </div>
+      <div class="btn_game on" *ngIf="game.mode == 0 && game.flag == true" (click)="stopGame()">
+        <i class="xi-border-clear xi-3x red"></i>
+        <span class="orange">S</span>
+        <span class="yellow">T</span>
+        <span class="green">O</span>
+        <span class="blue">P</span>
+      </div>
+      <div class="btn_game" *ngIf="game.mode == 1 && game.flag == false && game.isReady == false" (click)="readyGame()">
+        <i class="xi-border-clear xi-3x red"></i>
+        <span class="orange">R</span>
+        <span class="yellow">E</span>
+        <span class="green">A</span>
+        <span class="blue">D</span>
+        <span class="purple">Y</span>
+      </div>
+      <div class="btn_game on" *ngIf="game.mode == 1 && game.isGameEnded == true && game.isReady == true" (click)="unReadyGame()">
+        <i class="xi-border-clear xi-3x red"></i>
+        <span class="orange">W</span>
+        <span class="yellow">A</span>
+        <span class="green">I</span>
+        <span class="blue">T</span>
+      </div>
+      <div id="nextBlock">
+        <i class="xi-reply-all xi-2x"></i><span>NEXT BLOCK</span>
+      </div>
+      <div id="previewCurrent" class="block"></div>
+      <div id="previewNext" class="block"></div>
+    </div>
+  </div>
+  <div class="wrap_keypad">
+    <div id="putKey" class="key" (click)="keyDownEvent({keyCode: 32, shiftKey: false})"><i class="xi-touch xi-2x"></i></div>
+    <div id="swapKey" class="key" (click)="keyDownEvent({keyCode: 17, shiftKey: false})"><i class="xi-catched xi-2x"></i></div>
+    <div id="leftKey" class="key" (click)="keyDownEvent({keyCode: 37, shiftKey: false})"><i class="xi-arrow-left xi-2x"></i></div>
+    <div id="upKey" class="key" (click)="keyDownEvent({keyCode: 38, shiftKey: false})"><i class="xi-undo xi-2x"></i></div>
+    <div id="downKey" class="key" (click)="keyDownEvent({keyCode: 40, shiftKey: false})"><i class="xi-arrow-down xi-2x"></i></div>
+    <div id="rightKey" class="key" (click)="keyDownEvent({keyCode: 39, shiftKey: false})"><i class="xi-arrow-right xi-2x"></i></div>
+  </div>
+</div>
+<div class="screen_enemy" id="enemyScreen"></div>
+<div id="tempForm">
+  <div class="area_enemy">
+    <div class="section_score">
+      <div class="wrap_score">
+        <i class="xi-gamepad xi-2x"></i>
+        <span class="score">0</span>
+      </div>
+    </div>
+    <div class="map">
+    </div>
+  </div>
+</div>

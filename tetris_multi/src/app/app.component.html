@@ -1,0 +1,59 @@
+<div id="wrap">
+  <div id="header">
+    <div class="section_title">
+      <div class="inner_title">
+        <a [routerLink]="['/home', user.nickname]">
+          <h1 id="title">
+            <b class="red">T</b>
+            <b class="orange">E</b>
+            <b class="yellow">T</b>
+            <b class="green">R</b>
+            <b class="blue">I</b>
+            <b class="purple">S</b>
+          </h1>
+        </a>
+      </div>
+    </div>
+    <div class="btn_gnb" (click)="toggleGnb()" *ngIf="user.nickname != ''">
+      <i id="toggleGnbBtn" class="xi-4x" [ngClass]="{'xi-list-dot':isGnbShow == false, 'xi-close-circle-o':isGnbShow}"></i>
+    </div>
+    <div class="section_gnb" [ngClass]="{'on':isGnbShow == true}">
+      <div id="bgCover" class="mask_gnb" (click)="toggleGnb()"></div>
+      <div class="inner_gnb">
+        <div class="area_sns">
+          <i class="xi-user xi-3x"></i>
+          <span id="nickname">{{user.nickname}}</span>
+        </div>
+        <ul id="gnb">
+          <li><a [routerLink]="['/home', user.nickname]">Home</a></li>
+          <li><a [routerLink]="['/chat', user.nickname]">Chat</a></li>
+          <li><a [routerLink]="['/rank', user.nickname]">Rank</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <div id="contents">
+      <div id="messageWindow" *ngIf="message != ''">
+        <p id="message">{{message}}</p>
+      </div>
+      <div id="alertLayerPopup" class="popup" *ngIf="message != ''">
+        <div class="mask"></div>
+        <div class="wrap_popup">
+          <div class="section_popup_title">
+            <p class="inner_popup_title">
+              <i id="alertIcon" class="xi-2x"></i>
+              <span id="alertTitle"></span>
+              <i id="layerPopupCloseBtn" class="xi-close-circle-o xi-2x"></i>
+            </p>
+          </div>
+          <div class="section_alert_message">
+            <p id="alertMessage"></p>
+          </div>
+        </div>
+      </div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <div id="footer"></div>
+</div>

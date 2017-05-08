@@ -1,0 +1,20 @@
+:host{width:100%;height:100%;}
+#queueSpinner .mask{width:100%;height:100%;background-color:#000000;opacity:0.7;position:fixed;left:0;top:0;z-index:117;}
+#queueSpinner .inner_spinner{width:250px;padding:10px;background-color:#ffffff;border-radius:10px;top:calc(50% - 30px);left:calc(50% - 130px);position:fixed;z-index:118;}
+#queueSpinner .inner_spinner span{font-size:30px;}
+#queueSpinner .inner_spinner .xi-spinner-5{color:#747474;margin-left:10px;}
+#queueSpinner .inner_spinner .xi-recording-stop{cursor:pointer;top:10px;left:10px;position:fixed;color:#000;background-color:#f0f0f0;border-radius:25px;}
+.wrap_mode{margin:10px;}
+.wrap_mode .inner_mode{width:100%;border:1px solid #e5e5e5;border-radius:5px;}
+.wrap_mode .inner_mode .title_mode{width:100%;font-size:20px;padding:10px 0;text-align:center;border-top-left-radius:5px;border-top-right-radius:5px;border-bottom:1px solid #e5e5e5;}
+.wrap_mode .inner_mode .title_mode span{margin:0 auto;color:#f3f3f3;}
+.wrap_mode .inner_mode .table_mode{width:100%;display:table;}
+.wrap_mode .inner_mode .table_mode .row_mode{width:100%;display:table-row;background:-webkit-linear-gradient(#f0f0f0,#ffffff);background:-o-linear-gradient(#f0f0f0,#ffffff);background:-moz-linear-gradient(#f0f0f0,#ffffff);background:linear-gradient(#f0f0f0,#ffffff);}
+.wrap_mode .inner_mode .table_mode .row_mode .column_mode{display:table-cell;}
+.wrap_mode .inner_mode .table_mode .row_mode .column_mode .mode{border:1px solid #d5d5d5;margin:5px;font-size:18px;cursor:pointer;}
+.wrap_mode .inner_mode .table_mode .row_mode .column_mode .mode p{padding:20px 0;text-align:center;top:calc(50% - 10px);color:#f3f3f3;}
+
+.single .title_mode{background:-webkit-linear-gradient(#1DDB16,#77FF70);background:-o-linear-gradient(#1DDB16,#77FF70);background:-moz-linear-gradient(#1DDB16,#77FF70);background:linear-gradient(#1DDB16,#77FF70);}
+.single .row_mode .column_mode{width:33.3%;}
+.multi .title_mode{background:-webkit-linear-gradient(#0054FF,#368AFF);background:-o-linear-gradient(#0054FF,#368AFF);background:-moz-linear-gradient(#0054FF,#368AFF);background:linear-gradient(#0054FF,#368AFF);}
+.multi .row_mode .column_mode{width:50%;}

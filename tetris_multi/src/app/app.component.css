@@ -1,0 +1,34 @@
+:host{width:100%;height:100%;display:block;}
+
+#wrap{width:100%;min-height:700px;height:100%;position:fixed;}
+#header{width:100%;height:68px;position:relative;}
+#header .section_title{height:100%;position:relative;margin:0 auto;background-color:#f5f5dc;border:1px solid #e5e5e5;z-index:109;}
+#header .section_title a:hover{text-decoration:none;}
+#header .section_title .inner_title{width:300px;text-align:center;margin:0 auto;color:#363636;}
+#header .section_title .inner_title #title{font-size:50px;}
+#header .btn_gnb{width:48px;height:48px;position:absolute;top:10px;left:10px;cursor:pointer;z-index:110;}
+#header .section_gnb{width:320px;height:calc(100% - 68px);display:none;background-color:#ffffff;position:fixed;top:68px;left:0;border-right:1px solid #e5e5e5;z-index:108;}
+#header .section_gnb .inner_gnb{width:100%;height:100%;background-color:white;}
+#header .section_gnb .inner_gnb .area_sns{height:50px;margin:10px;border-bottom:1px solid #e5e5e5;}
+#header .section_gnb .inner_gnb .area_sns i{border:1px solid #343434;color:#343434;}
+#header .section_gnb .inner_gnb .area_sns #nickname{margin-left:5px;font-size:35px;color:#5f9ea0;}
+#header .section_gnb .inner_gnb #gnb li{padding:10px 30px;font-size:18px;}
+#header .section_gnb .inner_gnb #gnb li.on a{font-weight:bold;color:#ff0000;}
+#header .section_gnb .mask_gnb{position:fixed;display:none;top:68px;right:0;bottom:0;left:320px;background-color:#000000;opacity:0.7;z-index:107;}
+#header .section_gnb.on{display:block;}
+#header .section_gnb.on .mask_gnb{display:block;}
+
+#container{width:100%;height:calc(100% - 68px);position:relative;background-color:#f8f8ff;}
+#contents{width:100%;height:100%;max-width:1200px;margin:0 auto;background-color:#ffffff;border: 1px solid #e5e5e5;}
+#contents #messageWindow{width:250px;top:calc(50% - 25px);left:calc(50% - 125px);position:fixed;border-radius:10px;background-color:#000000;opacity:0.6;z-index:106;}
+#contents #messageWindow #message{color:#ffffff;font-size:20px;display:block;padding:10px;word-break:break-word;}
+
+/* Mobile */
+@media all and (max-width:768px) {
+  #header{width:100%;height:55px;position:relative;}
+  #header #queueSpinner .inner_spinner .xi-recording-stop{top:5px;left:5px;}
+  #header .section_title .inner_title #title{font-size:40px;}
+  #header .btn_gnb{top:5px;left:5px;}
+  #header .section_gnb{width:240px;height:calc(100% - 55px);top:55px;}
+  #header .section_gnb #bgCover{left:240px;}
+}

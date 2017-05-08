@@ -1,0 +1,56 @@
+<script src="home.component.ts"></script>
+<div id="queueSpinner" class="section_spinner" *ngIf="isQueueSpinnerShow == true">
+  <div class="inner_spinner">
+    <span>waiting....{{playersText}}</span>
+    <i class="xi-spinner-5 xi-spin xi-5x"></i>
+    <i class="xi-recording-stop xi-4x" (click)="exitQueue()"></i>
+  </div>
+  <div class="mask"></div>
+</div>
+<div class="wrap_mode single">
+  <div class="inner_mode">
+    <div class="title_mode">
+      <span>Single Play</span>
+    </div>
+    <div class="table_mode">
+      <div class="row_mode">
+        <div class="column_mode">
+          <div class="mode" style="background-color:#ffe400;" (click)="singleStart('0')">
+            <p>easy</p>
+          </div>
+        </div>
+        <div class="column_mode">
+          <div class="mode" style="background-color:#ffbB00;" (click)="singleStart('1')">
+            <p>normal</p>
+          </div>
+        </div>
+        <div class="column_mode">
+          <div class="mode" style="background-color:#ff5e00;" (click)="singleStart('2')">
+            <p>hard</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wrap_mode multi">
+  <div class="inner_mode">
+    <div class="title_mode">
+      <span>Multi Play</span>
+    </div>
+    <div class="table_mode">
+      <div class="row_mode">
+        <div class="column_mode">
+          <div class="mode" style="background-color:#f08080;" (click)="joinQueue(2)">
+            <p>2players</p>
+          </div>
+        </div>
+        <div class="column_mode">
+          <div class="mode" style="background-color:#ff7f50;" (click)="joinQueue(3)">
+            <p>3players</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

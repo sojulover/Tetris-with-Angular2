@@ -1,0 +1,6 @@
+<div class="wrap_nickname">
+  <form>
+    <input type="text" class="input_nickname" placeholder="enter your nickname." [(ngModel)]="user.nickname" ngModel minlength="2" maxlength="8" [ngModelOptions]="{standalone: true}">
+    <button class="btn_login" (click)="startGame(); false">start</button>
+  </form>
+</div>
